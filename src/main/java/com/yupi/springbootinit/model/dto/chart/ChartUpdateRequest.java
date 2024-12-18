@@ -1,24 +1,22 @@
-package com.yupi.springbootinit.model.entity;
+package com.yupi.springbootinit.model.dto.chart;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
 /**
- * 用户
+ * 更新请求
  *
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
-@TableName(value = "user")
 @Data
-public class User implements Serializable {
-
+public class ChartUpdateRequest implements Serializable {
     /**
      * id
      */
@@ -26,24 +24,14 @@ public class User implements Serializable {
     private Long id;
 
     /**
-     * 用户账号
+     * 账号
      */
     private String userAccount;
 
     /**
-     * 用户密码
+     * 密码
      */
     private String userPassword;
-
-    /**
-     * 开放平台id
-     */
-    private String unionId;
-
-    /**
-     * 公众号openId
-     */
-    private String mpOpenId;
 
     /**
      * 用户昵称
@@ -54,11 +42,6 @@ public class User implements Serializable {
      * 用户头像
      */
     private String userAvatar;
-
-    /**
-     * 用户简介
-     */
-    private String userProfile;
 
     /**
      * 用户角色：user/admin/ban
@@ -81,6 +64,29 @@ public class User implements Serializable {
     @TableLogic
     private Integer isDelete;
 
-    @TableField(exist = false)
+    /**
+     * 分析目标
+     */
+    private String goal;
+
+    /**
+     * 图表数据
+     */
+    private String chartData;
+
+    /**
+     * 图表类型
+     */
+    private String chartType;
+
+    /**
+     * 生成的图表数据
+     */
+    private String genChart;
+
+    /**
+     * 生成的分析结论
+     */
+    private String genResult;
     private static final long serialVersionUID = 1L;
 }

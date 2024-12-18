@@ -12,9 +12,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yupi</groupId>
-    <artifactId>springboot-init</artifactId>
+    <artifactId>Intelligent BI-back</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-init</name>
+    <name>Intelligent BI-back</name>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -116,6 +116,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.36</version>
             <optional>true</optional>
         </dependency>
         <dependency>
